@@ -1,6 +1,15 @@
 # Note we use baseurl= here because using auto-selected mirrors conflicts with
 # change detection: https://github.com/coreos/fedora-coreos-pipeline/issues/85.
 
+[fedora-temp]
+name=Fedora $releasever - $basearch
+baseurl=http://10.20.91.97:8000/packages/
+enabled=0
+repo_gpgcheck=0
+type=rpm
+gpgcheck=0
+
+
 [fedora]
 name=Fedora $releasever - $basearch
 baseurl=https://dl.fedoraproject.org/pub/fedora/linux/releases/$releasever/Everything/$basearch/os/
